@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --color-fondo: #06202B;
+  --color-principal: #077A7D;
+  --color-secundario: #7AE2CF;
+  --color-texto: #F5EEDD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-principal);
+  border-bottom: 1px solid var(--color-secundario);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.nav__list {
+  list-style: none;
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--color-secundario);
+}
+
+.header__autenticacion {
+  display: flex;
+  gap: 1rem;
+}
+
+.boton {
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  color: var(--color-texto);
+  border: 2px solid var(--color-secundario);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boton:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
+}
+
+.boton--registro {
+  border-color: var(--color-principal);
+}
+
+.boton--registro:hover {
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
+}
