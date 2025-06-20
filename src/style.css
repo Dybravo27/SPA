@@ -34,6 +34,7 @@ body {
   width: auto;
   display: block;
 }
+
 .nav__list {
   list-style: none;
   display: inline-flex;
@@ -58,7 +59,9 @@ body {
 }
 
 .boton {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: transparent;
   color: var(--color-texto);
@@ -66,6 +69,7 @@ body {
   border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  min-width: 100px;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
@@ -84,4 +88,66 @@ body {
 .boton--registro:hover {
   background-color: var(--color-principal);
   color: var(--color-fondo);
+}
+
+/* ESTILO TABLA */
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  min-width: 54.5vw;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+.tabla {
+  color: var(--color-texto);
+  border-collapse: collapse;
+  /* border: 3px solid var(--color-secundario); */
+}
+
+/* .tabla__encabezado {} */
+
+/* .tabla__cuerpo {} */
+
+/* .tabla__fila {} */
+
+.tabla__celda {
+  border: 2px solid var(--color-secundario);
+  border-spacing: 0;
+  padding: 1rem 2rem;
+}
+
+.tabla__container-buttons{
+  display: flex;
+  gap: 1rem;
+}
+.boton--tamanio_agrandado{
+  border-radius: 0px 15px 0px 15px;
+  min-width: 200px;
+}
+
+/* ESTILO FORMULARIO */
+.section{
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  height: 40vh;
+  background-color: var(--color-principal);
+  border-radius: 20px;
 }

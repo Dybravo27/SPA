@@ -1,4 +1,6 @@
 import './style.css';
+import { categoriaController } from './views/Categorias/Categoriascontroller';
+import { productoController } from './views/Productos/Productocontroller';
 
 let main = document.querySelector('.main');
 
@@ -25,10 +27,12 @@ async function cargarVistas(path) {
   }
 }
 
-function recorrer(hash) {
-  const objetos = rutas.find(objeto => objeto.nombre == hash);
+async function recorrer(hash) {
+  const objetos = await rutas.find(objeto => objeto.nombre == hash);
   cargarVistas(objetos.path);
+  objetos.controlador();
 }
+
 const rutas = [
   {
     nombre: 'Inicio',
@@ -38,11 +42,16 @@ const rutas = [
   {
     nombre: 'Categorias',
     path: `src/views/Categorias/index.html`,
-    controlador: 'src/views/Categorias/Categoriascontroller.js'
+    controlador: categoriaController
   },
   {
     nombre: 'Productos',
     path: `src/views/Productos/index.html`,
-    controlador: 'src/views/Productos/Productocontroller.js'
+    controlador: productoController
+  },
+  {
+    nombre: 'FormularioCategoria',
+    path: `src/views/Categorias/formCategory.html`,
+    controlador: productoController
   }
 ];
