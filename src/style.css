@@ -99,13 +99,15 @@ body {
   flex-direction: column;
   width: 100vw;
 }
-.container{
+
+.container {
   display: flex;
   justify-content: space-between;
   min-width: 54.5vw;
   margin-top: 4rem;
   padding-bottom: 2rem;
 }
+
 .tabla {
   color: var(--color-texto);
   border-collapse: collapse;
@@ -124,30 +126,58 @@ body {
   padding: 1rem 2rem;
 }
 
-.tabla__container-buttons{
+.tabla__container-buttons {
   display: flex;
   gap: 1rem;
 }
-.boton--tamanio_agrandado{
+
+.boton--tamanio_agrandado {
   border-radius: 0px 15px 0px 15px;
   min-width: 200px;
 }
 
 /* ESTILO FORMULARIO */
-.section{
+.section {
   width: 100%;
   height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form{
+
+.form {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   width: 20%;
-  height: 40vh;
+  height: 50vh;
   background-color: var(--color-principal);
   border-radius: 20px;
+}
+
+.form__content {
+  /* height: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.form__input {
+  color: var(--color-texto);
+  font-size: 1.05rem;
+  padding: 10px;
+  width: 15vw;
+  border-radius: 5px;
+  border: 2px solid var(--color-secundario);
+  background-color: var(--color-fondo);
+  outline: none;
+}
+.form__input:focus{
+  border: 2px solid var(--color-texto);
+}
+.form__input--textarea{
+  height: 9vw;
+  resize: vertical;
 }
